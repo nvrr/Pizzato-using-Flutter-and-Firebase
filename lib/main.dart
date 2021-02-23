@@ -5,6 +5,7 @@ import 'package:pizza/services/manage_data.dart';
 import 'package:pizza/views/splashScreen.dart';
 import 'package:provider/provider.dart';
 
+import 'helpers/footer.dart';
 import 'helpers/middle.dart';
 
 void main() async{
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider.value(value: Headers()),
       ChangeNotifierProvider.value(value: MiddleHelpers()),
-      ChangeNotifierProvider.value(value: ManageData())
+      ChangeNotifierProvider.value(value: ManageData()),
+      ChangeNotifierProvider.value(value: Footers()),
     ],
     child: MaterialApp(
       title: 'Pizzato',
