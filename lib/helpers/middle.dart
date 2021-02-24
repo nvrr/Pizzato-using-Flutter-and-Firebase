@@ -50,14 +50,12 @@ class MiddleHelpers extends ChangeNotifier {
               return GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(
-                    context,
-                    PageTransition(
-                      child: DetailsScreen(
-                        queryDocumentSnapshot: snapshot.data[index],
-                      ),
-                      type: PageTransitionType.topToBottom
-                    )
-                  );
+                      context,
+                      PageTransition(
+                          child: DetailsScreen(
+                            queryDocumentSnapshot: snapshot.data[index],
+                          ),
+                          type: PageTransitionType.topToBottom));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -208,7 +206,7 @@ class MiddleHelpers extends ChangeNotifier {
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
-                        child: Padding(
+                      child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                             decoration: BoxDecoration(
@@ -228,33 +226,39 @@ class MiddleHelpers extends ChangeNotifier {
                                   padding: const EdgeInsets.only(left: 8.0),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(snapshot.data[index].data()['name'],
                                           style: TextStyle(
                                               fontSize: 26.0,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.black
-                                              )),
-                                      Text(snapshot.data[index].data()['category'],
+                                              color: Colors.black)),
+                                      Text(
+                                          snapshot.data[index]
+                                              .data()['category'],
                                           style: TextStyle(
                                               fontSize: 22.0,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.cyan
-                                              )),
-                                      Text(snapshot.data[index].data()['notPrice'].toString(),
+                                              color: Colors.cyan)),
+                                      Text(
+                                          snapshot.data[index]
+                                              .data()['notPrice']
+                                              .toString(),
                                           style: TextStyle(
-                                              decoration: TextDecoration.lineThrough,
+                                              decoration:
+                                                  TextDecoration.lineThrough,
                                               fontSize: 18.0,
                                               fontWeight: FontWeight.w500,
-                                              color: Colors.cyan
-                                              )),
+                                              color: Colors.cyan)),
                                       Row(
                                         children: [
                                           Icon(FontAwesomeIcons.rupeeSign,
-                                              size: 16.0
-                                              ),
-                                          Text(snapshot.data[index].data()['price'].toString(),
+                                              size: 16.0),
+                                          Text(
+                                              snapshot.data[index]
+                                                  .data()['price']
+                                                  .toString(),
                                               style: TextStyle(
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.w200,
@@ -265,7 +269,7 @@ class MiddleHelpers extends ChangeNotifier {
                                   ),
                                 ),
                                 Expanded(
-                                  child:Container(
+                                  child: Container(
                                     child: SizedBox(
                                       height: 200.0,
                                       child: Image.network(
