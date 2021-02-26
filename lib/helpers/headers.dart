@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pizza/services/maps.dart';
 
 class Headers extends ChangeNotifier {
   Widget appBar(BuildContext context) {
@@ -14,19 +15,28 @@ class Headers extends ChangeNotifier {
               Icon(
                 FontAwesomeIcons.locationArrow,
                 color: Colors.grey.shade600,
+                size: 16.0,
                 ),
-              Text(
-                'Work Place',
-                style: TextStyle(
-                  color: Colors.grey.shade600,
-                  fontSize: 12.0,
-                  fontWeight: FontWeight.w300
-                )
+              Container(
+                constraints: BoxConstraints(
+                  maxWidth: 250.0
+                ),
+                child: Text(
+                  finalAddress,
+                  style: TextStyle(
+                    color: Colors.grey.shade600,
+                    fontSize: 12.0,
+                    fontWeight: FontWeight.w300
+                  )
+                ),
               ),
             ],
           ),
-          IconButton(icon: Icon(FontAwesomeIcons.search, color: Colors.black),
-          onPressed: () {})
+          Expanded(
+                      child: IconButton(icon: Icon(FontAwesomeIcons.search, 
+            color: Colors.black,),
+            onPressed: () {}),
+          )
         ],
       ),
     );

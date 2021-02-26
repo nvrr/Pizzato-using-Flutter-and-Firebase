@@ -48,7 +48,7 @@ class _CartScreenState extends State<CartScreen> {
           },
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 260.0),
+          padding: const EdgeInsets.only(left: 255.0),
           child: IconButton(
             icon: Icon(FontAwesomeIcons.trash, color: Colors.red),
             onPressed: () {},

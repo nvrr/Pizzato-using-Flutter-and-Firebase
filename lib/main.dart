@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pizza/helpers/headers.dart';
 import 'package:pizza/services/manage_data.dart';
+import 'package:pizza/services/maps.dart';
 import 'package:pizza/views/splashScreen.dart';
 import 'package:provider/provider.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider.value(value: MiddleHelpers()),
       ChangeNotifierProvider.value(value: ManageData()),
       ChangeNotifierProvider.value(value: Footers()),
+      ChangeNotifierProvider.value(value: GenerateMaps()),
     ],
     child: MaterialApp(
       title: 'Pizzato',

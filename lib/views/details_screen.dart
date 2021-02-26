@@ -91,7 +91,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
         ),
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           Container(
-            constraints: BoxConstraints(maxWidth: 300.0),
+            constraints: BoxConstraints(maxWidth: 250.0),
             child: Text(widget.queryDocumentSnapshot['name'],
                 style: TextStyle(
                   fontSize: 36.0,
