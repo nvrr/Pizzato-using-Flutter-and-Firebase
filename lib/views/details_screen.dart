@@ -3,6 +3,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:pizza/views/cart_screen.dart';
 import 'package:pizza/views/home_screen.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -313,7 +314,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
       Stack(
         children: [
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(context, 
+              PageTransition(
+                child: CartScreen(),
+                type: PageTransitionType.bottomToTop
+              ));
+            },
             child: Icon(
               Icons.shopping_basket,
               color: Colors.black,
