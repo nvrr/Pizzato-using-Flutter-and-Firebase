@@ -10,7 +10,7 @@
         android:label="pizza"
         android:icon="@mipmap/ic_launcher">
     <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyDbuwfYgv38xylRHSeItupvCm6qtw3jyoQ"/>
+               android:value="KEY"/>
 
         <activity
             android:name=".MainActivity"
